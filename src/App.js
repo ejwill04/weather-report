@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import API_KEY from '../key';
 
 class App extends Component {
   constructor() {
@@ -9,6 +10,7 @@ class App extends Component {
     }
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.fetchWeather = this.fetchWeather.bind(this);
   }
 
   handleChange(e) {
@@ -16,7 +18,17 @@ class App extends Component {
   }
 
   handleSubmit() {
-    console.log('submit')
+    this.fetchWeather();
+  }
+
+
+  fetchWeather() {
+    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${this.state.userInput}&APPID=${API_KEY}`)
+    .then(response => response.json())
+    .then(payload => {
+      this.setState({ selectedWeather: payload, userInput: '' })
+    })
+    .catch(error => console.log(error));
   }
 
   render() {
