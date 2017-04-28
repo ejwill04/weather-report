@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import RenderWeather from './RenderWeather';
 import './App.css';
 import API_KEY from '../key';
 
@@ -7,6 +8,7 @@ class App extends Component {
     super();
     this.state = {
       userInput: '',
+      selectedWeather: {},
     }
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -20,7 +22,6 @@ class App extends Component {
   handleSubmit() {
     this.fetchWeather();
   }
-
 
   fetchWeather() {
     fetch(`http://api.openweathermap.org/data/2.5/weather?q=${this.state.userInput}&APPID=${API_KEY}`)
@@ -49,6 +50,7 @@ class App extends Component {
               onClick={this.handleSubmit}
             >Search
           </button>
+          <RenderWeather />
         </div>
       </div>
     );
