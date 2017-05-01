@@ -16,7 +16,7 @@ class City extends Component {
         <div>Temperature: {Math.round(data.main.temp)}°F</div>
         <div>Humidity: {data.main.humidity}%</div>
         <div>Wind: {Math.round(data.wind.speed)} miles/hour</div>
-        <div>{data.clouds.all}% cloudy</div>
+        <div>Cloud Coverage: {data.clouds.all}%</div>
         <div>Description: {data.weather[0].description}</div>
       </Paper>
     )
