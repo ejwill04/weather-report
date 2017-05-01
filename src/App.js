@@ -1,35 +1,36 @@
-import React, { Component } from 'react';
-import RenderWeather from './RenderWeather';
-import './App.css';
-import API_KEY from '../key';
+import React, { Component } from 'react'
+import AppContainer from './containers/AppContainer'
+import CityList from './CityList'
+import './App.css'
+import API_KEY from '../key'
 
-class App extends Component {
+export class App extends Component {
   constructor() {
     super();
     this.state = {
       userInput: '',
       selectedWeather: {},
     }
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.fetchWeather = this.fetchWeather.bind(this);
+    this.handleChange = this.handleChange.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
+    this.fetchWeather = this.fetchWeather.bind(this)
   }
 
   handleChange(e) {
-    this.setState({ userInput: e.target.value });
+    this.setState({ userInput: e.target.value })
   }
 
   handleSubmit() {
-    this.fetchWeather();
+    this.fetchWeather()
   }
 
   fetchWeather() {
     fetch(`http://api.openweathermap.org/data/2.5/weather?q=${this.state.userInput}&APPID=${API_KEY}`)
     .then(response => response.json())
     .then(payload => {
-      this.setState({ selectedWeather: payload, userInput: '' })
+      this.props.addCity(payload)
     })
-    .catch(error => console.log(error));
+    .catch(error => console.log(error))
   }
 
   render() {
@@ -50,11 +51,12 @@ class App extends Component {
               onClick={this.handleSubmit}
             >Search
           </button>
-          <RenderWeather />
         </div>
+        <CityList />
+        {this.props.children}
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default AppContainer(App)
