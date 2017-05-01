@@ -72,7 +72,7 @@ export class App extends Component {
                 onClick={this.handleSubmit}
                 disabled={this.state.userInput.length === 0}
               />
-            <div>{this.state.errorMessage}</div>
+            <div className='errorMessage'>{this.state.errorMessage}</div>
           </div>
           <CityList />
           {this.props.children}
