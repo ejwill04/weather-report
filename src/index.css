@@ -7,8 +7,8 @@ body {
 }
 
 .city-card {
-  border: 1px solid black;
-  width: 40%;
+  width: 25%;
+  min-width: 350px;
   padding: 20px;
   margin: 10px;
 }

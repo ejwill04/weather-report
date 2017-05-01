@@ -61,6 +61,7 @@ export class App extends Component {
                 id='submitBtn'
                 label='Search'
                 onClick={this.handleSubmit}
+                disabled={this.state.userInput.length === 0}
               />
             <div>{this.state.errorMessage}</div>
           </div>
