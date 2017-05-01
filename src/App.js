@@ -65,6 +65,7 @@ export class App extends Component {
               />
             <RaisedButton
                 id='submitBtn'
+                style={{ marginLeft: 10 }}
                 label='Search'
                 onClick={this.handleSubmit}
                 disabled={this.state.userInput.length === 0}
