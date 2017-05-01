@@ -6,7 +6,10 @@ import API_KEY from '../key'
 
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import RaisedButton from 'material-ui/RaisedButton'
-import TextField from 'material-ui/TextField';
+import TextField from 'material-ui/TextField'
+
+import injectTapEventPlugin from 'react-tap-event-plugin'
+injectTapEventPlugin()
 
 export class App extends Component {
   constructor() {
