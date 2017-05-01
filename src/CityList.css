@@ -1,0 +1,22 @@
+.city-card {
+  width: 25%;
+  min-width: 350px;
+  padding: 20px;
+  margin: 10px;
+}
+
+.city-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 10px;
+}
+
+.city-name {
+  font-size: 20px;
+}
+
+.city-time {
+  font-style: italic;
+}
