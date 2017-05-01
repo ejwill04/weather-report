@@ -16,8 +16,7 @@ export class App extends Component {
     super();
     this.state = {
       userInput: '',
-      errorMessage: '',
-      selectedWeather: {},
+      errorMessage: ''
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)

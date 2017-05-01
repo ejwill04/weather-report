@@ -11,8 +11,8 @@ class CityList extends Component {
     }) : null
 
     return (
-      <div className='results-container'>
-        <div>{list}</div>
+      <div>
+        <div className='results-container'>{list}</div>
       </div>
     )
   }

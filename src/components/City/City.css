@@ -1,13 +1,13 @@
 .city-card {
-  width: 25%;
+  width: 24%;
   min-width: 350px;
   padding: 20px;
-  margin: 10px;
+  margin: 5px;
 }
 
 .city-header {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
   align-items: baseline;
   padding: 10px;
