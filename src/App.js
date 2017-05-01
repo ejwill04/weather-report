@@ -25,7 +25,7 @@ export class App extends Component {
   }
 
   fetchWeather() {
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${this.state.userInput}&APPID=${API_KEY}`)
+    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${this.state.userInput}&APPID=${API_KEY}&units=imperial`)
     .then(response => response.json())
     .then(payload => {
       this.props.addCity(payload)
