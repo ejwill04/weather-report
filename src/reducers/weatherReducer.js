@@ -4,7 +4,7 @@ const cities = (state = [], action) => {
       return [
         ...state,
         Object.assign(action.data, { time: Date.now() })
-      ]
+      ].sort((a, b) => b.time - a.time)
     default:
       return state;
   }
