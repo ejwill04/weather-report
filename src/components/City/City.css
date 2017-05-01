@@ -1,11 +1,11 @@
-.city-card {
+.cityCard {
   width: 24%;
   min-width: 350px;
   padding: 20px;
   margin: 5px;
 }
 
-.city-header {
+.cityHeader {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -13,10 +13,10 @@
   padding: 10px;
 }
 
-.city-name {
+.cityName {
   font-size: 20px;
 }
 
-.city-time {
+.cityTime {
   font-style: italic;
 }

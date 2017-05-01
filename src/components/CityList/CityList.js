@@ -12,7 +12,7 @@ class CityList extends Component {
 
     return (
       <div>
-        <div className='results-container'>{list}</div>
+        <div className='resultsContainer'>{list}</div>
       </div>
     )
   }

@@ -8,10 +8,10 @@ class City extends Component {
   render() {
     let { data } = this.props
     return (
-      <Paper className='city-card' key>
-        <header className='city-header'>
-          <div className='city-name'>{data.name}, {data.sys.country}</div>
-          <div className='city-time'>{moment(data.time).format('MMMM Do YYYY, h:mm a')}</div>
+      <Paper className='cityCard' key>
+        <header className='cityHeader'>
+          <div className='cityName'>{data.name}, {data.sys.country}</div>
+          <div className='cityTime'>{moment(data.time).format('MMMM Do YYYY, h:mm a')}</div>
         </header>
         <div>Temperature: {Math.round(data.main.temp)}°F</div>
         <div>Humidity: {data.main.humidity}%</div>

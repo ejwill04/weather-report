@@ -6,11 +6,11 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-.App {
+.app {
   text-align: center;
 }
 
-.App-header {
+.appHeader {
   background-color: #00BCD4;
   height: 80px;
   padding: 20px;

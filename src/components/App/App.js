@@ -53,11 +53,11 @@ export class App extends Component {
   render() {
     return (
       <MuiThemeProvider>
-        <div className="App">
-          <div className="App-header">
+        <div className="app">
+          <div className="appHeader">
             <h2>Weather Report</h2>
           </div>
-          <div id='search-container'>
+          <div id='searchContainer'>
             <TextField
                 id='inputField'
                 placeholder='Search by City'
