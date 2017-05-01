@@ -18,6 +18,7 @@ export class App extends Component {
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleEnter = this.handleEnter.bind(this)
     this.fetchWeather = this.fetchWeather.bind(this)
   }
 
@@ -27,6 +28,10 @@ export class App extends Component {
 
   handleSubmit() {
     this.fetchWeather()
+  }
+
+  handleEnter(e) {
+    return e.keyCode === 13 ? this.handleSubmit() : null
   }
 
   fetchWeather() {
@@ -56,6 +61,7 @@ export class App extends Component {
                 placeholder='Search by City'
                 value={this.state.userInput}
                 onChange={this.handleChange}
+                onKeyDown={this.handleEnter}
               />
             <RaisedButton
                 id='submitBtn'

@@ -9,8 +9,8 @@ class CityList extends Component {
   render() {
     console.log(this.props.weather)
     let list = this.props.weather ?
-    this.props.weather.map(city => {
-      return <Paper className='city-card' key={city.id}>
+    this.props.weather.map((city, i) => {
+      return <Paper className='city-card' key={i}>
                <header className='city-header'>
                  <div className='city-name'>{city.name}, {city.sys.country}</div>
                  <div className='city-time'>{moment(city.time).format('MMMM Do YYYY, h:mm a')}</div>
