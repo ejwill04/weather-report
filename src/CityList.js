@@ -2,12 +2,11 @@ import React, { Component } from 'react'
 import AppContainer from './containers/AppContainer'
 import moment from 'moment'
 
-import Paper from 'material-ui/Paper';
+import Paper from 'material-ui/Paper'
 
 class CityList extends Component {
 
   render() {
-    console.log(this.props.weather)
     let list = this.props.weather ?
     this.props.weather.map((city, i) => {
       return <Paper className='city-card' key={i}>

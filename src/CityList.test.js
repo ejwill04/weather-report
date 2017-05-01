@@ -4,7 +4,7 @@ import { Provider } from 'react-redux'
 
 import configureMockStore from 'redux-mock-store'
 
-import App from './App'
+import CityList from './CityList'
 
 const fakeStore = configureMockStore()({})
 
@@ -13,11 +13,11 @@ const setup = () => {
 
   const wrapper = mount(
     <Provider store={fakeStore}>
-      <App weather={props} />
+      <CityList weather={props} />
     </Provider>
   )
 
-  const Component = wrapper.find(App)
+  const Component = wrapper.find(CityList)
 
   return {
     props,
@@ -25,7 +25,7 @@ const setup = () => {
   }
 }
 
-describe('App', () => {
+describe('CityList', () => {
   it('should render something', () => {
       const { Component } = setup()
       expect(Component.length).toEqual(1)
