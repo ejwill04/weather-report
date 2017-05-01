@@ -9,6 +9,7 @@ export class App extends Component {
     super();
     this.state = {
       userInput: '',
+      errorMessage: '',
       selectedWeather: {},
     }
     this.handleChange = this.handleChange.bind(this)
@@ -28,7 +29,12 @@ export class App extends Component {
     fetch(`http://api.openweathermap.org/data/2.5/weather?q=${this.state.userInput}&APPID=${API_KEY}&units=imperial`)
     .then(response => response.json())
     .then(payload => {
-      this.props.addCity(payload)
+      if (payload.message === 'city not found') {
+        this.setState({ errorMessage: payload.message })
+      } else {
+        this.props.addCity(payload)
+        this.setState({ errorMessage: '', userInput: '' })
+      }
     })
     .catch(error => console.log(error))
   }
@@ -51,6 +57,7 @@ export class App extends Component {
               onClick={this.handleSubmit}
             >Search
           </button>
+          <div>{this.state.errorMessage}</div>
         </div>
         <CityList />
         {this.props.children}
