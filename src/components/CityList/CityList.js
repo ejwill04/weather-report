@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import AppContainer from './containers/AppContainer'
-import City from './City'
+import AppContainer from '../../containers/AppContainer'
+import City from '../City/City'
 
 class CityList extends Component {
 

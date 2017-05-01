@@ -3,7 +3,7 @@ import moment from 'moment'
 
 import Paper from 'material-ui/Paper'
 
-export default class City extends Component {
+class City extends Component {
 
   render() {
     let { data } = this.props
@@ -24,3 +24,5 @@ export default class City extends Component {
     )
   }
 }
+
+export default City;

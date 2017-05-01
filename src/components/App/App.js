@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import AppContainer from './containers/AppContainer'
-import CityList from './CityList'
+import AppContainer from '../../containers/AppContainer'
+import CityList from '../CityList/CityList'
 import './App.css'
-import API_KEY from '../key'
+import API_KEY from '../../../key'
 
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import RaisedButton from 'material-ui/RaisedButton'
